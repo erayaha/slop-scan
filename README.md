@@ -18,7 +18,7 @@ Found 4 unique package(s) to verify.
 🚨  ai-pdf-magic                   → FOUND on npm  ← potentially a slop squat package, review manually
 🚨  react-ai-forms                 → NOT FOUND on npm  ← hallucinated package
 
-1 hallucinated packages and 1 risky packages detected. Potential slopsquatting targets.
+1 hallucinated package and 1 risky package detected. Potential slopsquatting targets.
 ```
 
 ---

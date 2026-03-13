@@ -10,6 +10,8 @@ jobs:
   slop-scan:
     name: Verify npm packages
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -29,7 +29,8 @@ const CONCURRENCY = 8;
 function registryUrl(name) {
   if (name.startsWith('@')) {
     // @scope/pkg  →  https://registry.npmjs.org/@scope%2Fpkg/latest
-    const encoded = name.replace('/', '%2F');
+    // Use replaceAll (or a regex with /g) to encode ALL slashes, not just the first.
+    const encoded = name.replaceAll('/', '%2F');
     return `${REGISTRY_BASE}/${encoded}/latest`;
   }
   return `${REGISTRY_BASE}/${name}/latest`;
