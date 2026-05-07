@@ -50,7 +50,11 @@ const ossProjects = [
   },
 ];
 
-function GitHubIcon({ size = 18 }: { size?: number }) {
+const ICON_SIZE_SM = 14;
+const ICON_SIZE_MD = 18;
+const ICON_SIZE_LG = 24;
+
+function GitHubIcon({ size = ICON_SIZE_MD }: { size?: number }) {
   return (
     <svg
       stroke="currentColor"
@@ -176,7 +180,7 @@ export default function OSSPage() {
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
-                    <GitHubIcon size={24} />
+                    <GitHubIcon size={ICON_SIZE_LG} />
                   </div>
                 </div>
 
@@ -208,7 +212,7 @@ export default function OSSPage() {
                           : "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-secondary transition-colors text-sm font-medium"
                       }
                     >
-                      {!link.primary && <GitHubIcon size={14} />}
+                      {!link.primary && <GitHubIcon size={ICON_SIZE_SM} />}
                       {link.label}
                       {link.primary && <ExternalLinkIcon />}
                     </Link>
